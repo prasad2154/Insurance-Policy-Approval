@@ -1,6 +1,6 @@
 # 🛡️ Insurance Policy Approval Predictor
 
-A modern, professional **Machine Learning web application** built with Streamlit that predicts whether an insurance policy application will be **approved** or **rejected** based on applicant profile data.
+A modern, professional **Machine Learning web application** built with Streamlit that predicts whether an insurance policy application will be **approved** or **rejected** based on applicant profile.
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?logo=python&logoColor=white)
 ![Streamlit](https://img.shields.io/badge/Streamlit-Latest-FF4B4B?logo=streamlit&logoColor=white)
@@ -25,11 +25,13 @@ A modern, professional **Machine Learning web application** built with Streamlit
 ## 🗂️ Project Structure
 
 ```
-Insurance_approval_model/
-├── app.py              # Main Streamlit application (single file)
-├── Insurance.pkl       # Pre-trained ML model (pickle format)
-├── README.md           # Project documentation
-└── requirements.txt    # Python dependencies
+Insurance-Policy-Approval/
+├── app.py                          # Main Streamlit application
+├── Insurance.pkl                   # Pre-trained ML model (pickle format)
+├── Insurance_Policy_approvar.ipynb # Jupyter notebook with model training
+├── requirements.txt                # Python dependencies
+├── .gitignore                      # Git ignore rules
+└── README.md                       # Project documentation
 ```
 
 ---
@@ -65,21 +67,27 @@ The model uses the following **9 features** to predict policy approval:
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
-   cd Insurance_approval_model
+   git clone https://github.com/prasad2154/Insurance-Policy-Approval.git
+   cd Insurance-Policy-Approval
    ```
 
-2. **Install dependencies**
+2. **Create a virtual environment (recommended)**
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+   ```
+
+3. **Install dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Run the application**
+4. **Run the application**
    ```bash
    streamlit run app.py
    ```
 
-4. **Open in browser**
+5. **Open in browser**
    The app will launch at [http://localhost:8501](http://localhost:8501)
 
 ---
@@ -92,13 +100,9 @@ The model uses the following **9 features** to predict policy approval:
 | `pandas` | Data manipulation |
 | `numpy` | Numerical computations |
 | `scikit-learn` | Machine learning model |
-| `plotly` | Interactive visualisations |
+| `plotly` | Interactive visualizations |
 
-Install all at once:
-
-```bash
-pip install streamlit pandas numpy scikit-learn plotly
-```
+All dependencies are listed in `requirements.txt`.
 
 ---
 
@@ -106,7 +110,7 @@ pip install streamlit pandas numpy scikit-learn plotly
 
 ```
 User Input ──▶ Encode Categoricals ──▶ Model Prediction ──▶ Display Results
-                (One-Hot Encoding)       (Insurance.pkl)      (Charts + Cards)
+               (One-Hot Encoding)       (Insurance.pkl)      (Charts + Cards)
 ```
 
 1. The user fills in applicant details via the input form.
@@ -117,11 +121,11 @@ User Input ──▶ Encode Categoricals ──▶ Model Prediction ──▶ Di
 
 ---
 
-## 📊 Visualisations
+## 📊 Visualizations
 
 - **🎯 Approval Gauge** — Circular gauge showing approval probability percentage.
 - **⚠️ Risk Meter** — Horizontal bar indicating risk level (Low → Very High).
-- **📊 Feature Contributions** — Normalised bar chart of all input features.
+- **📊 Feature Contributions** — Normalized bar chart of all input features.
 - **📈 Prediction History** — Line chart tracking approval probability across predictions.
 
 ---
@@ -159,6 +163,7 @@ This project is for educational purposes as part of the AI Course (G_38).
 
 - Built with [Streamlit](https://streamlit.io/), [Scikit-Learn](https://scikit-learn.org/) & [Plotly](https://plotly.com/python/)
 - UI inspired by modern SaaS dashboard design patterns
+- Training mentor guidance for course G_38
 
 ---
 
@@ -167,3 +172,5 @@ This project is for educational purposes as part of the AI Course (G_38).
   Built with ❤️ using Streamlit, Scikit-Learn & Plotly<br>
   © 2026 • All Rights Reserved
 </p>
+
+**Last Updated:** 2026
